@@ -36,6 +36,7 @@ dependencies {
     implementation "info.picocli:picocli"
     implementation "io.micronaut.configuration:micronaut-picocli"
     implementation "io.micronaut:micronaut-management"
+    implementation "com.google.guava:guava:28.2-jre"
     runtimeOnly    "ch.qos.logback:logback-classic:1.2.3"
     compileOnly    "org.projectlombok:lombok:1.18.10"
     testAnnotationProcessor platform("io.micronaut:micronaut-bom:$micronautVersion")

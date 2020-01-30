@@ -30,10 +30,8 @@ public class CreationalCommand implements Runnable {
     @Override
     public void run() {
 
-        log.info(
-                "These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new operator.\n" +
-                "This gives program more flexibility in deciding which objects need to be created for a given use case"
-        );
+        log.info(">> These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new operator.");
+        log.info(">> This gives program more flexibility in deciding which objects need to be created for a given use case");
 
         Shape shape = null;
         switch(type){
