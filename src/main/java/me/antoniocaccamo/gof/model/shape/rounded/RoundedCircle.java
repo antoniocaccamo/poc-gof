@@ -7,9 +7,6 @@ import me.antoniocaccamo.gof.model.Shape;
  * @author antoniocaccamo on 30/01/2020
  */
 @Slf4j
-public class RoundedCircle implements Shape {
-    @Override
-    public void draw() {
-      log.info("drawing a {} ", getClass().getSimpleName());
-    }
+public class RoundedCircle extends RoundedShape {
+
 }

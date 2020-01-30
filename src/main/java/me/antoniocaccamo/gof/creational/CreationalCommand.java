@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import me.antoniocaccamo.gof.creational.factory.ShapeFactory;
 import me.antoniocaccamo.gof.creational.factory.abstractfactory.AbstractShapeFactory;
 import me.antoniocaccamo.gof.creational.factory.abstractfactory.ShapeFactoryProducer;
+import me.antoniocaccamo.gof.creational.prototype.ShapePrototype;
 import me.antoniocaccamo.gof.creational.singleton.Singleton;
 import me.antoniocaccamo.gof.model.Shape;
 import picocli.CommandLine.Command;
@@ -29,7 +30,10 @@ public class CreationalCommand implements Runnable {
     @Override
     public void run() {
 
-        log.info("type : {}", type);
+        log.info(
+                "These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new operator.\n" +
+                "This gives program more flexibility in deciding which objects need to be created for a given use case"
+        );
 
         Shape shape = null;
         switch(type){
@@ -43,6 +47,11 @@ public class CreationalCommand implements Runnable {
                 shape = ShapeFactory.createShape(Shape.Type.Rectangle);
                 shape.draw();
 
+            case prototype:
+                shape = ShapePrototype.getShape(Shape.Type.Circle);
+                shape.draw();
+                break;
+
             case singleton:
                 Singleton.$().dowork();
                 break;
@@ -54,8 +63,9 @@ public class CreationalCommand implements Runnable {
 
     public enum Type {
         abstractfactory,
-        singleton,
-        factory
+        factory,
+        prototype,
+        singleton
     }
 
 }
