@@ -1,0 +1,5 @@
+profile: cli
+defaultPackage: me.antoniocaccamo.cliapp
+---
+testFramework: spock
+sourceLanguage: java
