@@ -25,6 +25,7 @@ public class StructuralDemoBridge implements StructuralDemo {
 		log.info(">> This type of design pattern comes under structural pattern as this pattern decouples implementation class and abstract class by providing a bridge structure between them"); 
 		log.info(">> This pattern involves an interface which acts as a bridge which makes the functionality of concrete classes independent from interface implementer classes.");
 		log.info(">> Both types of classes can be altered structurally without affecting each other");
+		log.info("");
 	}
 
 

@@ -4,6 +4,7 @@ package me.antoniocaccamo.gof.pattern.structural;
 import lombok.extern.slf4j.Slf4j;
 import me.antoniocaccamo.gof.pattern.structural.adapter.StructuralDemoAdapter;
 import me.antoniocaccamo.gof.pattern.structural.bridge.StructuralDemoBridge;
+import me.antoniocaccamo.gof.pattern.structural.filter.StructuralDemoFilter;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -40,6 +41,11 @@ public class StructuralCommand implements Runnable {
             	demo = StructuralDemoBridge.$();
             	
             	break;
+            	
+            case filter:
+            	
+            	demo = StructuralDemoFilter.$();
+            	break;
 
             default:
                 throw new RuntimeException("no type ..");
@@ -49,7 +55,8 @@ public class StructuralCommand implements Runnable {
 
     public enum Type {
         adapter ,
-        bridge
+        bridge  ,
+        filter
     }
 
 }
