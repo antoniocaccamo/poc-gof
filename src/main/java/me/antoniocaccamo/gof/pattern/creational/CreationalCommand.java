@@ -38,16 +38,16 @@ public class CreationalCommand implements Runnable {
 
             case abstractfactory:
                 shape = ShapeFactoryProducer.getShapeFactory(AbstractShapeFactory.Type.Rounded).createShape(Shape.Type.Square);
-                shape.draw();
+                shape.shape();
                 break;
 
             case factory:
                 shape = ShapeFactory.createShape(Shape.Type.Rectangle);
-                shape.draw();
+                shape.shape();
 
             case prototype:
                 shape = ShapePrototype.getShape(Shape.Type.Circle);
-                shape.draw();
+                shape.shape();
                 break;
 
             case singleton:

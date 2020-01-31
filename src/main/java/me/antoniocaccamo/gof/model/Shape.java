@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
  * @author antoniocaccamo on 30/01/2020
  */
 @Slf4j
-public abstract class Shape implements Cloneable {
+public abstract class Shape implements  Cloneable {
 
     public enum Type {
         Circle,
@@ -14,8 +14,8 @@ public abstract class Shape implements Cloneable {
         Square
     }
 
-    public void draw() {
-        log.info("drawing a {} ", getClass().getSimpleName());
+    public void shape() {
+        log.info("shaping a {} ", getClass().getSimpleName());
     }
 
     @Override

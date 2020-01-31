@@ -2,12 +2,10 @@ package me.antoniocaccamo.gof.pattern.structural;
 
 
 import lombok.extern.slf4j.Slf4j;
-import me.antoniocaccamo.gof.model.Shape;
-import me.antoniocaccamo.gof.pattern.structural.adapter.Player;
+import me.antoniocaccamo.gof.pattern.structural.adapter.StructuralDemoAdapter;
+import me.antoniocaccamo.gof.pattern.structural.bridge.StructuralDemoBridge;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
-
-import java.util.Arrays;
 
 @Command(
         name = "structural",
@@ -30,25 +28,28 @@ public class StructuralCommand implements Runnable {
         log.info(">> These design patterns concern class and object composition.");
         log.info(">> Concept of inheritance is used to compose interfaces and define ways to compose objects to obtain new functionalities.");
 
-        Shape shape = null;
+        StructuralDemo demo = null;
+        
         switch(type){
 
             case adapter:
-                Player.play(Arrays.asList(
-                        "D:\\development\\workspaces\\at.video.mp4",
-                        "D:\\development\\workspaces\\at.video.mkv",
-                        "D:\\development\\workspaces\\at.video.txt",
-                        "D:\\development\\workspaces\\at.video.mp3"
-                ));
+                demo = StructuralDemoAdapter.$();
                 break;
+            case bridge:
+            	
+            	demo = StructuralDemoBridge.$();
+            	
+            	break;
 
             default:
                 throw new RuntimeException("no type ..");
         }
+        demo.demo();
     }
 
     public enum Type {
-        adapter
+        adapter ,
+        bridge
     }
 
 }
