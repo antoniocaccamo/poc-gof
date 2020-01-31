@@ -1,8 +1,8 @@
-package me.antoniocaccamo.gof.behavioral;
+package me.antoniocaccamo.gof.pattern.behavioral;
 
 
 import lombok.extern.slf4j.Slf4j;
-import me.antoniocaccamo.gof.creational.singleton.Singleton;
+import me.antoniocaccamo.gof.pattern.creational.singleton.Singleton;
 import me.antoniocaccamo.gof.model.Shape;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;

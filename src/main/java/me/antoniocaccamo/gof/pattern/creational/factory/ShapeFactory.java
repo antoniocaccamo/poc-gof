@@ -1,4 +1,4 @@
-package me.antoniocaccamo.gof.creational.factory.abstractfactory;
+package me.antoniocaccamo.gof.pattern.creational.factory;
 
 import lombok.extern.slf4j.Slf4j;
 import me.antoniocaccamo.gof.model.Shape;
@@ -11,12 +11,16 @@ import javax.validation.constraints.NotNull;
 /**
  * @author antoniocaccamo on 30/01/2020
  */
+
 @Slf4j
-public class NormalShapeFactory extends AbstractShapeFactory {
-    @Override
-    public Shape createShape(Shape.@NotNull Type type) {
+public class ShapeFactory {
+
+    public static Shape createShape(@NotNull Shape.Type type){
+
         log.info("shape type : {}", type);
+
         Shape shape = null;
+
         switch (type){
             case Circle:
                 shape = new Circle();
@@ -32,4 +36,5 @@ public class NormalShapeFactory extends AbstractShapeFactory {
         }
         return shape;
     }
+
 }

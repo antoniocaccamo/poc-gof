@@ -1,4 +1,4 @@
-package me.antoniocaccamo.gof.structural.adapter;
+package me.antoniocaccamo.gof.pattern.structural.adapter;
 
 import lombok.extern.slf4j.Slf4j;
 

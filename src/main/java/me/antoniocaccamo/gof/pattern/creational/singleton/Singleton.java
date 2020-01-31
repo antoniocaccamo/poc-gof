@@ -1,4 +1,4 @@
-package me.antoniocaccamo.gof.creational.singleton;
+package me.antoniocaccamo.gof.pattern.creational.singleton;
 
 import lombok.extern.slf4j.Slf4j;
 

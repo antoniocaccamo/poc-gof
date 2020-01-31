@@ -1,14 +1,9 @@
-package me.antoniocaccamo.gof.structural;
+package me.antoniocaccamo.gof.pattern.structural;
 
 
 import lombok.extern.slf4j.Slf4j;
-import me.antoniocaccamo.gof.creational.factory.ShapeFactory;
-import me.antoniocaccamo.gof.creational.factory.abstractfactory.AbstractShapeFactory;
-import me.antoniocaccamo.gof.creational.factory.abstractfactory.ShapeFactoryProducer;
-import me.antoniocaccamo.gof.creational.prototype.ShapePrototype;
-import me.antoniocaccamo.gof.creational.singleton.Singleton;
 import me.antoniocaccamo.gof.model.Shape;
-import me.antoniocaccamo.gof.structural.adapter.Player;
+import me.antoniocaccamo.gof.pattern.structural.adapter.Player;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 

@@ -1,4 +1,4 @@
-package me.antoniocaccamo.gof.creational.factory.abstractfactory;
+package me.antoniocaccamo.gof.pattern.creational.factory.abstractfactory;
 
 import lombok.extern.slf4j.Slf4j;
 

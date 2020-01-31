@@ -1,4 +1,4 @@
-package me.antoniocaccamo.gof.creational.prototype;
+package me.antoniocaccamo.gof.pattern.creational.prototype;
 
 import me.antoniocaccamo.gof.model.Shape;
 import me.antoniocaccamo.gof.model.shape.Circle;

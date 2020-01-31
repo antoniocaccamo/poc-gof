@@ -1,4 +1,4 @@
-package me.antoniocaccamo.gof.creational.factory.abstractfactory;
+package me.antoniocaccamo.gof.pattern.creational.factory.abstractfactory;
 
 import me.antoniocaccamo.gof.model.Shape;
 
