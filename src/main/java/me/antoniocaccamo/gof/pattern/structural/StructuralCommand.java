@@ -4,6 +4,7 @@ package me.antoniocaccamo.gof.pattern.structural;
 import lombok.extern.slf4j.Slf4j;
 import me.antoniocaccamo.gof.pattern.structural.adapter.StructuralDemoAdapter;
 import me.antoniocaccamo.gof.pattern.structural.bridge.StructuralDemoBridge;
+import me.antoniocaccamo.gof.pattern.structural.decorator.StructuralDemoDecorator;
 import me.antoniocaccamo.gof.pattern.structural.filter.StructuralDemoFilter;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
@@ -28,6 +29,7 @@ public class StructuralCommand implements Runnable {
     public void run() {
         log.info(">> These design patterns concern class and object composition.");
         log.info(">> Concept of inheritance is used to compose interfaces and define ways to compose objects to obtain new functionalities.");
+        
 
         StructuralDemo demo = null;
         
@@ -36,14 +38,16 @@ public class StructuralCommand implements Runnable {
             case adapter:
                 demo = StructuralDemoAdapter.$();
                 break;
-            case bridge:
-            	
-            	demo = StructuralDemoBridge.$();
-            	
+                
+            case bridge:            	
+            	demo = StructuralDemoBridge.$();            	
             	break;
             	
-            case filter:
+            case decorator:            	
+            	demo = StructuralDemoDecorator.$();
+            	break;
             	
+            case filter:            	
             	demo = StructuralDemoFilter.$();
             	break;
 
@@ -54,8 +58,9 @@ public class StructuralCommand implements Runnable {
     }
 
     public enum Type {
-        adapter ,
-        bridge  ,
+        adapter  ,
+        bridge   ,
+        decorator,
         filter
     }
 
