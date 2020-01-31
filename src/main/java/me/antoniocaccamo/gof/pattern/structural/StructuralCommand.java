@@ -6,6 +6,7 @@ import me.antoniocaccamo.gof.pattern.structural.adapter.StructuralDemoAdapter;
 import me.antoniocaccamo.gof.pattern.structural.bridge.StructuralDemoBridge;
 import me.antoniocaccamo.gof.pattern.structural.decorator.StructuralDemoDecorator;
 import me.antoniocaccamo.gof.pattern.structural.filter.StructuralDemoFilter;
+import me.antoniocaccamo.gof.pattern.structural.proxy.StructuralDemoProxy;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -50,6 +51,11 @@ public class StructuralCommand implements Runnable {
             case filter:            	
             	demo = StructuralDemoFilter.$();
             	break;
+            	
+            case proxy:            	
+            	demo = StructuralDemoProxy.$();
+            	break;
+            
 
             default:
                 throw new RuntimeException("no type ..");
@@ -61,6 +67,7 @@ public class StructuralCommand implements Runnable {
         adapter  ,
         bridge   ,
         decorator,
+        proxy,
         filter
     }
 
