@@ -2,8 +2,7 @@ package me.antoniocaccamo.gof.pattern.behavioral;
 
 
 import lombok.extern.slf4j.Slf4j;
-import me.antoniocaccamo.gof.pattern.creational.singleton.Singleton;
-import me.antoniocaccamo.gof.model.Shape;
+import me.antoniocaccamo.gof.pattern.behavioral.chainofresponsability.BehavorialDemoChainOfResponsability;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -28,20 +27,22 @@ public class BehavioralCommand implements Runnable {
 
         log.info(">> These design patterns are specifically concerned with communication between objects.");
 
-        Shape shape = null;
+        BehavioralDemo demo ;
         switch(type){
 
-            case adapter:
-                Singleton.$().dowork();
+            case chain:
+                demo = BehavorialDemoChainOfResponsability.$();
                 break;
 
             default:
                 throw new RuntimeException("no type ..");
         }
+        
+        demo.demo();
     }
 
     public enum Type {
-        adapter
+        chain
     }
 
 }
