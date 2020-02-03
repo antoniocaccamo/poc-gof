@@ -3,6 +3,7 @@ package me.antoniocaccamo.gof.pattern.behavioral;
 
 import lombok.extern.slf4j.Slf4j;
 import me.antoniocaccamo.gof.pattern.behavioral.chainofresponsability.BehavorialDemoChainOfResponsability;
+import me.antoniocaccamo.gof.pattern.behavioral.observer.BehavorialDemoObserver;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -33,6 +34,9 @@ public class BehavioralCommand implements Runnable {
             case chain:
                 demo = BehavorialDemoChainOfResponsability.$();
                 break;
+            case observer:
+            	demo = BehavorialDemoObserver.$();
+            	break;
 
             default:
                 throw new RuntimeException("no type ..");
@@ -42,7 +46,8 @@ public class BehavioralCommand implements Runnable {
     }
 
     public enum Type {
-        chain
+        chain,
+        observer
     }
 
 }

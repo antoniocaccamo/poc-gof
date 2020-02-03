@@ -24,7 +24,7 @@ public class BehavorialDemoChainOfResponsability implements BehavioralDemo {
 	/**
 	 * 
 	 */
-	public BehavorialDemoChainOfResponsability() {
+	private BehavorialDemoChainOfResponsability() {
 		log.info("");
 		log.info(">> The chain of responsibility pattern creates a chain of receiver objects for a request.");
 		log.info(">> This pattern decouples sender and receiver of a request based on type of request.");
