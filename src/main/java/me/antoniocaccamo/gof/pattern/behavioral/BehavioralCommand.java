@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import me.antoniocaccamo.gof.pattern.behavioral.chainofresponsability.BehavorialDemoChainOfResponsability;
 import me.antoniocaccamo.gof.pattern.behavioral.command.BehavorialDemoCommand;
 import me.antoniocaccamo.gof.pattern.behavioral.observer.BehavorialDemoObserver;
+import me.antoniocaccamo.gof.pattern.behavioral.template.BehavorialDemoTemplate;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -39,8 +40,13 @@ public class BehavioralCommand implements Runnable {
             case command:
             	demo = BehavorialDemoCommand.$();
             	break;
+            	
             case observer:
             	demo = BehavorialDemoObserver.$();
+            	break;
+            	
+            case template:
+            	demo = BehavorialDemoTemplate.$();
             	break;
 
             default:
@@ -53,7 +59,8 @@ public class BehavioralCommand implements Runnable {
     public enum Type {
         chain,
         command,
-        observer
+        observer,
+        template
     }
 
 }

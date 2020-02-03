@@ -28,7 +28,7 @@ public class BehavorialDemoCommand implements BehavioralDemo {
 		log.info("");
 		log.info(">> Command pattern is a data driven design pattern and falls under behavioral pattern category.");
 		log.info(">> A request is wrapped under an object as command and passed to invoker object."); 
-		log.info(">> Invoker object looks for the appropriate object which can handle this command and passes the command to the corresponding object which executes the comman");		
+		log.info(">> Invoker object looks for the appropriate object which can handle this command and passes the command to the corresponding object which executes the command");		
 		log.info("");
 	}
 
