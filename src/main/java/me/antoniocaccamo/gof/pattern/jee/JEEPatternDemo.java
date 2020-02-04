@@ -9,6 +9,6 @@ import me.antoniocaccamo.gof.pattern.PatternDemo;
  * @author antoniocaccamo on 2020-01-31
  *
  */
-public interface JEEDemo extends PatternDemo {
+public interface JEEPatternDemo extends PatternDemo {
 
 }

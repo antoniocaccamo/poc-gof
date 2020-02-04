@@ -5,6 +5,8 @@ import io.micronaut.context.annotation.Value;
 import lombok.extern.slf4j.Slf4j;
 import me.antoniocaccamo.gof.pattern.behavioral.BehavioralCommand;
 import me.antoniocaccamo.gof.pattern.creational.CreationalCommand;
+import me.antoniocaccamo.gof.pattern.jee.JEECommand;
+import me.antoniocaccamo.gof.pattern.jee.JEEPatternDemo;
 import me.antoniocaccamo.gof.pattern.structural.StructuralCommand;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
@@ -15,9 +17,10 @@ import picocli.CommandLine.Option;
         description = "gof",
         mixinStandardHelpOptions = true,
         subcommands = {
-            CreationalCommand.class,
-            StructuralCommand.class,
-            BehavioralCommand.class
+                CreationalCommand.class,
+                StructuralCommand.class,
+                BehavioralCommand.class,
+                JEECommand.class
         }
 )
 @Slf4j
@@ -36,7 +39,7 @@ public class GOFCommand implements Runnable {
         PicocliRunner.run(GOFCommand.class, args);
     }
 
-    public void run() {    
+    public void run() {
         CommandLine.usage(this, System.out);
     }
 }
