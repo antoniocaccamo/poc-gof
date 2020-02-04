@@ -2,7 +2,7 @@ package me.antoniocaccamo.gof.pattern.behavioral.memento;
 
 
 import lombok.extern.slf4j.Slf4j;
-import me.antoniocaccamo.gof.pattern.behavioral.BehavioralDemo;
+import me.antoniocaccamo.gof.pattern.behavioral.BehavioralPatternDemo;
 
 /**
  * @author antoniocaccamo on 2020-02-03
@@ -10,13 +10,13 @@ import me.antoniocaccamo.gof.pattern.behavioral.BehavioralDemo;
  */
 
 @Slf4j
-public class BehavorialDemoMemento implements BehavioralDemo {
+public class BehavorialPatternDemoMemento implements BehavioralPatternDemo {
 
 
-	private static final BehavioralDemo instance = new BehavorialDemoMemento();
+	private static final BehavioralPatternDemo instance = new BehavorialPatternDemoMemento();
 
 
-	public static BehavioralDemo $() {
+	public static BehavioralPatternDemo $() {
 		return instance;
 	}
 
@@ -24,7 +24,7 @@ public class BehavorialDemoMemento implements BehavioralDemo {
 	/**
 	 *
 	 */
-	private BehavorialDemoMemento() {
+	private BehavorialPatternDemoMemento() {
 		log.info("");
 		log.info(">> Memento pattern is used to restore state of an object to a previous state.");
 		log.info("");

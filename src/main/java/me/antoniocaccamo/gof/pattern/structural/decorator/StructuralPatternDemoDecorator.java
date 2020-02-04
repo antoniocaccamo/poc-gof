@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import me.antoniocaccamo.gof.model.Shape;
 import me.antoniocaccamo.gof.model.shape.Circle;
 import me.antoniocaccamo.gof.model.shape.Square;
-import me.antoniocaccamo.gof.pattern.structural.StructuralDemo;
+import me.antoniocaccamo.gof.pattern.structural.StructuralPatternDemo;
 
 /**
  * @author antoniocaccamo on 2020-01-31
@@ -15,12 +15,12 @@ import me.antoniocaccamo.gof.pattern.structural.StructuralDemo;
  */
 
 @Slf4j
-public class StructuralDemoDecorator implements StructuralDemo {
+public class StructuralPatternDemoDecorator implements StructuralPatternDemo {
 
-	private static StructuralDemo structuralDemo = new StructuralDemoDecorator();
+	private static StructuralPatternDemo structuralDemo = new StructuralPatternDemoDecorator();
 
 
-	private StructuralDemoDecorator() {
+	private StructuralPatternDemoDecorator() {
 		log.info("");
 		log.info(">> Decorator pattern allows to add new functionality an existing object without altering its structure."); 
 		log.info(">> This type of design pattern comes under structural pattern as this pattern acts as a wrapper to existing class.");				
@@ -30,7 +30,7 @@ public class StructuralDemoDecorator implements StructuralDemo {
 	}
 
 
-	public static StructuralDemo $() {
+	public static StructuralPatternDemo $() {
 
 		return structuralDemo;
 	}

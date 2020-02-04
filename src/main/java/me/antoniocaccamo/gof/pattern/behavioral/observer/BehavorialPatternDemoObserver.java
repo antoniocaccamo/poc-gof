@@ -2,7 +2,7 @@ package me.antoniocaccamo.gof.pattern.behavioral.observer;
 
 
 import lombok.extern.slf4j.Slf4j;
-import me.antoniocaccamo.gof.pattern.behavioral.BehavioralDemo;
+import me.antoniocaccamo.gof.pattern.behavioral.BehavioralPatternDemo;
 
 /**
  * @author antoniocaccamo on 2020-02-03
@@ -10,13 +10,13 @@ import me.antoniocaccamo.gof.pattern.behavioral.BehavioralDemo;
  */
 
 @Slf4j
-public class BehavorialDemoObserver implements BehavioralDemo {
+public class BehavorialPatternDemoObserver implements BehavioralPatternDemo {
 
 
-	private static final BehavioralDemo instance = new BehavorialDemoObserver();
+	private static final BehavioralPatternDemo instance = new BehavorialPatternDemoObserver();
 
 
-	public static BehavioralDemo $() {
+	public static BehavioralPatternDemo $() {
 		return instance;
 	}
 
@@ -24,7 +24,7 @@ public class BehavorialDemoObserver implements BehavioralDemo {
 	/**
 	 * 
 	 */
-	private BehavorialDemoObserver() {
+	private BehavorialPatternDemoObserver() {
 		log.info("");
 		log.info(">> Observer pattern is used when there is one-to-many relationship between objects such as if one object is modified, its depenedent objects are to be notified automatically.");		
 		log.info("");

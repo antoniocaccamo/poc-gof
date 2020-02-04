@@ -4,7 +4,7 @@
 package me.antoniocaccamo.gof.pattern.structural.proxy;
 
 import lombok.extern.slf4j.Slf4j;
-import me.antoniocaccamo.gof.pattern.structural.StructuralDemo;
+import me.antoniocaccamo.gof.pattern.structural.StructuralPatternDemo;
 
 /**
  * @author antoniocaccamo on 2020-01-31
@@ -12,12 +12,12 @@ import me.antoniocaccamo.gof.pattern.structural.StructuralDemo;
  */
 
 @Slf4j
-public class StructuralDemoProxy implements StructuralDemo {
+public class StructuralPatternDemoProxy implements StructuralPatternDemo {
 
-	private static StructuralDemo structuralDemo = new StructuralDemoProxy();
+	private static StructuralPatternDemo structuralDemo = new StructuralPatternDemoProxy();
 
 
-	private StructuralDemoProxy() {
+	private StructuralPatternDemoProxy() {
 		log.info("");
 		log.info(">> In Proxy pattern, a class represents functionality of another class. This type of design pattern comes under structural pattern."); 
 		log.info(">> In Proxy pattern, we create object having original object to interface its functionality to outer world.");
@@ -26,7 +26,7 @@ public class StructuralDemoProxy implements StructuralDemo {
 	}
 
 
-	public static StructuralDemo $() {
+	public static StructuralPatternDemo $() {
 
 		return structuralDemo;
 	}

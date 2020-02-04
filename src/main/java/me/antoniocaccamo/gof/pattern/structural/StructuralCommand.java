@@ -2,11 +2,11 @@ package me.antoniocaccamo.gof.pattern.structural;
 
 
 import lombok.extern.slf4j.Slf4j;
-import me.antoniocaccamo.gof.pattern.structural.adapter.StructuralDemoAdapter;
-import me.antoniocaccamo.gof.pattern.structural.bridge.StructuralDemoBridge;
-import me.antoniocaccamo.gof.pattern.structural.decorator.StructuralDemoDecorator;
-import me.antoniocaccamo.gof.pattern.structural.filter.StructuralDemoFilter;
-import me.antoniocaccamo.gof.pattern.structural.proxy.StructuralDemoProxy;
+import me.antoniocaccamo.gof.pattern.structural.adapter.StructuralPatternDemoAdapter;
+import me.antoniocaccamo.gof.pattern.structural.bridge.StructuralPatternDemoBridge;
+import me.antoniocaccamo.gof.pattern.structural.decorator.StructuralPatternDemoDecorator;
+import me.antoniocaccamo.gof.pattern.structural.filter.StructuralPatternDemoFilter;
+import me.antoniocaccamo.gof.pattern.structural.proxy.StructuralPatternDemoProxy;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -32,28 +32,28 @@ public class StructuralCommand implements Runnable {
         log.info(">> Concept of inheritance is used to compose interfaces and define ways to compose objects to obtain new functionalities.");
         
 
-        StructuralDemo demo = null;
+        StructuralPatternDemo demo = null;
         
         switch(type){
 
             case adapter:
-                demo = StructuralDemoAdapter.$();
+                demo = StructuralPatternDemoAdapter.$();
                 break;
                 
             case bridge:            	
-            	demo = StructuralDemoBridge.$();            	
+            	demo = StructuralPatternDemoBridge.$();
             	break;
             	
             case decorator:            	
-            	demo = StructuralDemoDecorator.$();
+            	demo = StructuralPatternDemoDecorator.$();
             	break;
             	
             case filter:            	
-            	demo = StructuralDemoFilter.$();
+            	demo = StructuralPatternDemoFilter.$();
             	break;
             	
             case proxy:            	
-            	demo = StructuralDemoProxy.$();
+            	demo = StructuralPatternDemoProxy.$();
             	break;
             
 

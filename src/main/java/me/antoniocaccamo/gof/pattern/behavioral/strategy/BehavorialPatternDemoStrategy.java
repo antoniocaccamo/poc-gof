@@ -2,7 +2,7 @@ package me.antoniocaccamo.gof.pattern.behavioral.strategy;
 
 
 import lombok.extern.slf4j.Slf4j;
-import me.antoniocaccamo.gof.pattern.behavioral.BehavioralDemo;
+import me.antoniocaccamo.gof.pattern.behavioral.BehavioralPatternDemo;
 
 /**
  * @author antoniocaccamo on 2020-02-03
@@ -10,13 +10,13 @@ import me.antoniocaccamo.gof.pattern.behavioral.BehavioralDemo;
  */
 
 @Slf4j
-public class BehavorialDemoStrategy implements BehavioralDemo {
+public class BehavorialPatternDemoStrategy implements BehavioralPatternDemo {
 
 
-	private static final BehavioralDemo instance = new BehavorialDemoStrategy();
+	private static final BehavioralPatternDemo instance = new BehavorialPatternDemoStrategy();
 
 
-	public static BehavioralDemo $() {
+	public static BehavioralPatternDemo $() {
 		return instance;
 	}
 
@@ -24,7 +24,7 @@ public class BehavorialDemoStrategy implements BehavioralDemo {
 	/**
 	 *
 	 */
-	private BehavorialDemoStrategy() {
+	private BehavorialPatternDemoStrategy() {
 		log.info("");
 		log.info(">> In Strategy pattern, a class behavior or its algorithm can be changed at run time.");				
 		log.info(">> In Strategy pattern, we create objects which represent various strategies and a context object whose behavior varies as per its strategy object.");

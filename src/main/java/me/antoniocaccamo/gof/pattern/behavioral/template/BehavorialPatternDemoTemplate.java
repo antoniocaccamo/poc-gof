@@ -2,7 +2,7 @@ package me.antoniocaccamo.gof.pattern.behavioral.template;
 
 
 import lombok.extern.slf4j.Slf4j;
-import me.antoniocaccamo.gof.pattern.behavioral.BehavioralDemo;
+import me.antoniocaccamo.gof.pattern.behavioral.BehavioralPatternDemo;
 
 /**
  * @author antoniocaccamo on 2020-02-03
@@ -10,13 +10,13 @@ import me.antoniocaccamo.gof.pattern.behavioral.BehavioralDemo;
  */
 
 @Slf4j
-public class BehavorialDemoTemplate implements BehavioralDemo {
+public class BehavorialPatternDemoTemplate implements BehavioralPatternDemo {
 
 
-	private static final BehavioralDemo instance = new BehavorialDemoTemplate();
+	private static final BehavioralPatternDemo instance = new BehavorialPatternDemoTemplate();
 
 
-	public static BehavioralDemo $() {
+	public static BehavioralPatternDemo $() {
 		return instance;
 	}
 
@@ -24,7 +24,7 @@ public class BehavorialDemoTemplate implements BehavioralDemo {
 	/**
 	 * 
 	 */
-	private BehavorialDemoTemplate() {
+	private BehavorialPatternDemoTemplate() {
 		log.info("");
 		log.info(">> In Template pattern, an abstract class exposes defined way(s)/template(s) to execute its methods.");
 		log.info(">> Its subclasses can override the method implementation as per need but the invocation is to be in the same way as defined by an abstract class.");

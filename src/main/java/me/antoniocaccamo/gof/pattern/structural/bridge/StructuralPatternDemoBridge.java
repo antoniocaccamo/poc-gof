@@ -6,20 +6,20 @@ package me.antoniocaccamo.gof.pattern.structural.bridge;
 import java.util.Arrays;
 
 import lombok.extern.slf4j.Slf4j;
-import me.antoniocaccamo.gof.pattern.structural.StructuralDemo;
+import me.antoniocaccamo.gof.pattern.structural.StructuralPatternDemo;
 
 /**
  * @author antoniocaccamo on 2020-01-31
  *
  */
 @Slf4j
-public class StructuralDemoBridge implements StructuralDemo {
+public class StructuralPatternDemoBridge implements StructuralPatternDemo {
 
 
-	private static StructuralDemo structuralDemo = new StructuralDemoBridge();
+	private static StructuralPatternDemo structuralDemo = new StructuralPatternDemoBridge();
 
 
-	private StructuralDemoBridge() {
+	private StructuralPatternDemoBridge() {
 		log.info("");
 		log.info(">> Bridge is used where we need to decouple an abstraction from its implementation so that the two can vary independently.");
 		log.info(">> This type of design pattern comes under structural pattern as this pattern decouples implementation class and abstract class by providing a bridge structure between them"); 
@@ -30,7 +30,7 @@ public class StructuralDemoBridge implements StructuralDemo {
 
 
 
-	public static StructuralDemo $() {
+	public static StructuralPatternDemo $() {
 
 		return structuralDemo;
 	}

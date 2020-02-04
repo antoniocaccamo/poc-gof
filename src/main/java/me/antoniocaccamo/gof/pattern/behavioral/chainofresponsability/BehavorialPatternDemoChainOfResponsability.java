@@ -2,7 +2,7 @@ package me.antoniocaccamo.gof.pattern.behavioral.chainofresponsability;
 
 
 import lombok.extern.slf4j.Slf4j;
-import me.antoniocaccamo.gof.pattern.behavioral.BehavioralDemo;
+import me.antoniocaccamo.gof.pattern.behavioral.BehavioralPatternDemo;
 
 /**
  * @author antoniocaccamo on 2020-02-03
@@ -10,13 +10,13 @@ import me.antoniocaccamo.gof.pattern.behavioral.BehavioralDemo;
  */
 
 @Slf4j
-public class BehavorialDemoChainOfResponsability implements BehavioralDemo {
+public class BehavorialPatternDemoChainOfResponsability implements BehavioralPatternDemo {
 
 
-	private static final BehavioralDemo instance = new BehavorialDemoChainOfResponsability();
+	private static final BehavioralPatternDemo instance = new BehavorialPatternDemoChainOfResponsability();
 
 
-	public static BehavioralDemo $() {
+	public static BehavioralPatternDemo $() {
 		return instance;
 	}
 
@@ -24,7 +24,7 @@ public class BehavorialDemoChainOfResponsability implements BehavioralDemo {
 	/**
 	 * 
 	 */
-	private BehavorialDemoChainOfResponsability() {
+	private BehavorialPatternDemoChainOfResponsability() {
 		log.info("");
 		log.info(">> The chain of responsibility pattern creates a chain of receiver objects for a request.");
 		log.info(">> This pattern decouples sender and receiver of a request based on type of request.");
@@ -37,7 +37,7 @@ public class BehavorialDemoChainOfResponsability implements BehavioralDemo {
 	@Override
 	public void demo() {
 
-		AbstractLogger  loggerChain = BehavorialDemoChainOfResponsability.getChainOfResponsability();
+		AbstractLogger  loggerChain = BehavorialPatternDemoChainOfResponsability.getChainOfResponsability();
 
 
 		loggerChain.logMessage( AbstractLogger.Level.INFO, "This is an information.");

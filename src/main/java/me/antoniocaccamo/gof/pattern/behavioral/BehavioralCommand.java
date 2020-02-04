@@ -2,13 +2,13 @@ package me.antoniocaccamo.gof.pattern.behavioral;
 
 
 import lombok.extern.slf4j.Slf4j;
-import me.antoniocaccamo.gof.pattern.behavioral.chainofresponsability.BehavorialDemoChainOfResponsability;
-import me.antoniocaccamo.gof.pattern.behavioral.command.BehavorialDemoCommand;
-import me.antoniocaccamo.gof.pattern.behavioral.memento.BehavorialDemoMemento;
-import me.antoniocaccamo.gof.pattern.behavioral.observer.BehavorialDemoObserver;
-import me.antoniocaccamo.gof.pattern.behavioral.strategy.BehavorialDemoStrategy;
-import me.antoniocaccamo.gof.pattern.behavioral.template.BehavorialDemoTemplate;
-import me.antoniocaccamo.gof.pattern.behavioral.visitor.BehavorialDemoVisitor;
+import me.antoniocaccamo.gof.pattern.behavioral.chainofresponsability.BehavorialPatternDemoChainOfResponsability;
+import me.antoniocaccamo.gof.pattern.behavioral.command.BehavorialPatternDemoCommand;
+import me.antoniocaccamo.gof.pattern.behavioral.memento.BehavorialPatternDemoMemento;
+import me.antoniocaccamo.gof.pattern.behavioral.observer.BehavorialPatternDemoObserver;
+import me.antoniocaccamo.gof.pattern.behavioral.strategy.BehavorialPatternDemoStrategy;
+import me.antoniocaccamo.gof.pattern.behavioral.template.BehavorialPatternDemoTemplate;
+import me.antoniocaccamo.gof.pattern.behavioral.visitor.BehavorialPatternDemoVisitor;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -33,35 +33,35 @@ public class BehavioralCommand implements Runnable {
 
         log.info(">> These design patterns are specifically concerned with communication between objects.");
 
-        BehavioralDemo demo ;
+        BehavioralPatternDemo demo ;
         switch(type){
 
             case chain:
-                demo = BehavorialDemoChainOfResponsability.$();
+                demo = BehavorialPatternDemoChainOfResponsability.$();
                 break;
                 
             case command:
-            	demo = BehavorialDemoCommand.$();
+            	demo = BehavorialPatternDemoCommand.$();
             	break;
 
             case memento:
-                demo = BehavorialDemoMemento.$();
+                demo = BehavorialPatternDemoMemento.$();
                 break;
             	
             case observer:
-            	demo = BehavorialDemoObserver.$();
+            	demo = BehavorialPatternDemoObserver.$();
             	break;
             	
             case  strategy:
-            	demo  = BehavorialDemoStrategy.$();
+            	demo  = BehavorialPatternDemoStrategy.$();
             	break;
             	
             case template:
-            	demo = BehavorialDemoTemplate.$();
+            	demo = BehavorialPatternDemoTemplate.$();
             	break;
 
             case visitor :
-                demo = BehavorialDemoVisitor.$();
+                demo = BehavorialPatternDemoVisitor.$();
                 break;
 
             default:

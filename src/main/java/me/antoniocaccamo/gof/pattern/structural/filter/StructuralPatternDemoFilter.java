@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lombok.extern.slf4j.Slf4j;
-import me.antoniocaccamo.gof.pattern.structural.StructuralDemo;
+import me.antoniocaccamo.gof.pattern.structural.StructuralPatternDemo;
 
 /**
  * @author antoniocaccamo on 2020-01-31
@@ -15,12 +15,12 @@ import me.antoniocaccamo.gof.pattern.structural.StructuralDemo;
  */
 
 @Slf4j
-public class StructuralDemoFilter implements StructuralDemo {
+public class StructuralPatternDemoFilter implements StructuralPatternDemo {
 	
-	private static StructuralDemo structuralDemo = new StructuralDemoFilter();
+	private static StructuralPatternDemo structuralDemo = new StructuralPatternDemoFilter();
 	
 	
-	private StructuralDemoFilter() {
+	private StructuralPatternDemoFilter() {
 		log.info("");
 		log.info(">> Filter pattern or Criteria pattern is a design pattern that enables developers to filter a set of objects, using different criteria, chaining them in a decoupled way through logical operations.");
 		log.info(">> This type of design pattern comes under structural pattern as this pattern is combining multiple criteria to obtain single criteria.");
@@ -29,7 +29,7 @@ public class StructuralDemoFilter implements StructuralDemo {
 	}
 
 
-    public static StructuralDemo $() {
+    public static StructuralPatternDemo $() {
     	
        return structuralDemo;
     }

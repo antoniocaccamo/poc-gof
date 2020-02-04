@@ -2,7 +2,7 @@ package me.antoniocaccamo.gof.pattern.behavioral.command;
 
 
 import lombok.extern.slf4j.Slf4j;
-import me.antoniocaccamo.gof.pattern.behavioral.BehavioralDemo;
+import me.antoniocaccamo.gof.pattern.behavioral.BehavioralPatternDemo;
 
 /**
  * @author antoniocaccamo on 2020-02-03
@@ -10,13 +10,13 @@ import me.antoniocaccamo.gof.pattern.behavioral.BehavioralDemo;
  */
 
 @Slf4j
-public class BehavorialDemoCommand implements BehavioralDemo {
+public class BehavorialPatternDemoCommand implements BehavioralPatternDemo {
 
 
-	private static final BehavioralDemo instance = new BehavorialDemoCommand();
+	private static final BehavioralPatternDemo instance = new BehavorialPatternDemoCommand();
 
 
-	public static BehavioralDemo $() {
+	public static BehavioralPatternDemo $() {
 		return instance;
 	}
 
@@ -24,7 +24,7 @@ public class BehavorialDemoCommand implements BehavioralDemo {
 	/**
 	 * 
 	 */
-	private BehavorialDemoCommand() {
+	private BehavorialPatternDemoCommand() {
 		log.info("");
 		log.info(">> Command pattern is a data driven design pattern and falls under behavioral pattern category.");
 		log.info(">> A request is wrapped under an object as command and passed to invoker object."); 

@@ -3,7 +3,7 @@ package me.antoniocaccamo.gof.pattern.structural.adapter;
 
 import com.google.common.io.Files;
 import lombok.extern.slf4j.Slf4j;
-import me.antoniocaccamo.gof.pattern.structural.StructuralDemo;
+import me.antoniocaccamo.gof.pattern.structural.StructuralPatternDemo;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,12 +12,12 @@ import java.util.List;
  * @author antoniocaccamo on 30/01/2020
  */
 @Slf4j
-public class StructuralDemoAdapter implements StructuralDemo{
+public class StructuralPatternDemoAdapter implements StructuralPatternDemo {
 	
-	private static StructuralDemo structuralDemo = new StructuralDemoAdapter();
+	private static StructuralPatternDemo structuralDemo = new StructuralPatternDemoAdapter();
 	
 	
-	private StructuralDemoAdapter() {
+	private StructuralPatternDemoAdapter() {
 		log.info("");
 		log.info(">> Adapter pattern works as a bridge between two incompatible interfaces.");
 		log.info(">> This type of design pattern comes under structural pattern as this pattern combines the capability of two independent interfaces.");
@@ -27,7 +27,7 @@ public class StructuralDemoAdapter implements StructuralDemo{
 	}
 
 
-    public static StructuralDemo $() {
+    public static StructuralPatternDemo $() {
     	
        return structuralDemo;
     }

@@ -2,7 +2,7 @@ package me.antoniocaccamo.gof.pattern.behavioral.visitor;
 
 
 import lombok.extern.slf4j.Slf4j;
-import me.antoniocaccamo.gof.pattern.behavioral.BehavioralDemo;
+import me.antoniocaccamo.gof.pattern.behavioral.BehavioralPatternDemo;
 
 import java.util.Arrays;
 import java.util.List;
@@ -13,13 +13,13 @@ import java.util.List;
  */
 
 @Slf4j
-public class BehavorialDemoVisitor implements BehavioralDemo {
+public class BehavorialPatternDemoVisitor implements BehavioralPatternDemo {
 
 
-	private static final BehavioralDemo instance = new BehavorialDemoVisitor();
+	private static final BehavioralPatternDemo instance = new BehavorialPatternDemoVisitor();
 
 
-	public static BehavioralDemo $() {
+	public static BehavioralPatternDemo $() {
 		return instance;
 	}
 
@@ -27,7 +27,7 @@ public class BehavorialDemoVisitor implements BehavioralDemo {
 	/**
 	 *
 	 */
-	private BehavorialDemoVisitor() {
+	private BehavorialPatternDemoVisitor() {
 		log.info("");
 		log.info(">> In Visitor pattern, we use a visitor class which changes the executing algorithm of an element class.");
 		log.info(">> By this way, execution algorithm of element can vary as and when visitor varies.");
