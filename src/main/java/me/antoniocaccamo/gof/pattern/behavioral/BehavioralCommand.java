@@ -8,6 +8,7 @@ import me.antoniocaccamo.gof.pattern.behavioral.memento.BehavorialDemoMemento;
 import me.antoniocaccamo.gof.pattern.behavioral.observer.BehavorialDemoObserver;
 import me.antoniocaccamo.gof.pattern.behavioral.strategy.BehavorialDemoStrategy;
 import me.antoniocaccamo.gof.pattern.behavioral.template.BehavorialDemoTemplate;
+import me.antoniocaccamo.gof.pattern.behavioral.visitor.BehavorialDemoVisitor;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -59,6 +60,10 @@ public class BehavioralCommand implements Runnable {
             	demo = BehavorialDemoTemplate.$();
             	break;
 
+            case visitor :
+                demo = BehavorialDemoVisitor.$();
+                break;
+
             default:
                 throw new RuntimeException("no type ..");
         }
@@ -72,7 +77,8 @@ public class BehavioralCommand implements Runnable {
         memento,
         observer,
         strategy,
-        template
+        template,
+        visitor
     }
 
 }
