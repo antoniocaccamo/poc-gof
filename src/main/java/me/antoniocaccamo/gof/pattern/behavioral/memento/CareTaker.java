@@ -3,6 +3,13 @@ package me.antoniocaccamo.gof.pattern.behavioral.memento;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * 
+ * @author antoniocaccamo on 2020-02-04
+ *
+ */
+
 public class CareTaker {
 
     private List<Memento> mementoList = new ArrayList<Memento>();

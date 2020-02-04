@@ -6,6 +6,7 @@ import me.antoniocaccamo.gof.pattern.behavioral.chainofresponsability.Behavorial
 import me.antoniocaccamo.gof.pattern.behavioral.command.BehavorialDemoCommand;
 import me.antoniocaccamo.gof.pattern.behavioral.memento.BehavorialDemoMemento;
 import me.antoniocaccamo.gof.pattern.behavioral.observer.BehavorialDemoObserver;
+import me.antoniocaccamo.gof.pattern.behavioral.strategy.BehavorialDemoStrategy;
 import me.antoniocaccamo.gof.pattern.behavioral.template.BehavorialDemoTemplate;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
@@ -50,6 +51,10 @@ public class BehavioralCommand implements Runnable {
             	demo = BehavorialDemoObserver.$();
             	break;
             	
+            case  strategy:
+            	demo  = BehavorialDemoStrategy.$();
+            	break;
+            	
             case template:
             	demo = BehavorialDemoTemplate.$();
             	break;
@@ -66,6 +71,7 @@ public class BehavioralCommand implements Runnable {
         command,
         memento,
         observer,
+        strategy,
         template
     }
 

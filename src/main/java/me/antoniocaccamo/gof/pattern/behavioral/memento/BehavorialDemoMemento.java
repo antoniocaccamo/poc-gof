@@ -3,10 +3,6 @@ package me.antoniocaccamo.gof.pattern.behavioral.memento;
 
 import lombok.extern.slf4j.Slf4j;
 import me.antoniocaccamo.gof.pattern.behavioral.BehavioralDemo;
-import me.antoniocaccamo.gof.pattern.behavioral.observer.BinaryObserver;
-import me.antoniocaccamo.gof.pattern.behavioral.observer.HexObserver;
-import me.antoniocaccamo.gof.pattern.behavioral.observer.OctalObserver;
-import me.antoniocaccamo.gof.pattern.behavioral.observer.Subject;
 
 /**
  * @author antoniocaccamo on 2020-02-03
